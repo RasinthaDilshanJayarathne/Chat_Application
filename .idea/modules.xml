@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Clent_Side/Clent_Side.iml" filepath="$PROJECT_DIR$/Clent_Side/Clent_Side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server_Side/Server_Side.iml" filepath="$PROJECT_DIR$/Server_Side/Server_Side.iml" />
+    </modules>
+  </component>
+</project>
