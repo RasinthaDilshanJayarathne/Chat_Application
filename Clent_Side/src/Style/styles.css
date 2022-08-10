@@ -1,0 +1,13 @@
+.chatListContext{
+    -fx-background-color: #3498db;
+}
+.chatHeader{
+    -fx-background-color: #ffff;
+}
+.keyboard{
+    -fx-background-color: #ffff;
+}
+.chatContext{
+    -fx-background-color: #82ccdd;
+    -fx-background-image: url('../assets/image/R.png');
+}
