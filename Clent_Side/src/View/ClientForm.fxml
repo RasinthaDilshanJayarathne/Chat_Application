@@ -5,7 +5,9 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="clientMainContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: black;" stylesheets="@../Style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientFormController">
@@ -78,33 +80,54 @@
                         <FontAwesomeIconView fill="#10ac84" glyphName="PAPER_PLANE" size="40" />
                      </graphic>
                   </JFXButton>
+                  <JFXButton layoutX="28.0" layoutY="17.0" prefHeight="62.0" prefWidth="61.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#576574" glyphName="CIRCLE" size="45" />
+                     </graphic>
+                  </JFXButton>
                </children></AnchorPane>
-            <AnchorPane layoutX="513.0" prefHeight="111.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;">
+            <AnchorPane layoutX="513.0" prefHeight="88.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;">
                <children>
-                  <JFXButton layoutX="1011.0" layoutY="26.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                  <JFXButton layoutX="1011.0" layoutY="17.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <graphic>
-                        <FontAwesomeIconView fill="#636e72" glyphName="PHONE" size="40" />
+                        <FontAwesomeIconView fill="#636e72" glyphName="PHONE" size="35" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="1081.0" layoutY="25.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                  <JFXButton layoutX="1081.0" layoutY="16.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <graphic>
-                        <FontAwesomeIconView fill="#636e72" glyphName="VIDEO_CAMERA" size="40" text="" />
+                        <FontAwesomeIconView fill="#636e72" glyphName="VIDEO_CAMERA" size="35" text="" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="1156.0" layoutY="25.0" prefHeight="62.0" prefWidth="49.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                  <JFXButton layoutX="1156.0" layoutY="17.0" prefHeight="62.0" prefWidth="49.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <graphic>
-                        <FontAwesomeIconView fill="#636e72" glyphName="ELLIPSIS_V" size="40" />
+                        <FontAwesomeIconView fill="#636e72" glyphName="ELLIPSIS_V" size="35" />
                      </graphic>
                   </JFXButton>
+                  <Label layoutX="176.0" layoutY="2.0" prefHeight="56.0" prefWidth="331.0" text="Rasintha">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="178.0" layoutY="45.0" prefHeight="35.0" prefWidth="163.0" text="Online">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="105.0" layoutY="44.0" radius="39.0" stroke="WHITE" strokeType="INSIDE" />
+                  <FontAwesomeIconView fill="#10ac84" glyphName="CIRCLE" layoutX="125.0" layoutY="76.0" size="20" />
+                  <FontAwesomeIconView fill="#576574" glyphName="USER" layoutX="84.0" layoutY="63.0" size="50" wrappingWidth="54.750001430511475" />
                </children></AnchorPane>
             <AnchorPane layoutX="98.0" prefHeight="972.0" prefWidth="430.0" style="-fx-background-color: #b2bec3;">
                <children>
@@ -120,7 +143,7 @@
                      </children>
                   </AnchorPane>
                </children></AnchorPane>
-            <JFXTextArea focusColor="WHITE" layoutX="547.0" layoutY="121.0" prefHeight="767.0" prefWidth="1156.0" unFocusColor="WHITE">
+            <JFXTextArea focusColor="WHITE" layoutX="547.0" layoutY="104.0" prefHeight="784.0" prefWidth="1156.0" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

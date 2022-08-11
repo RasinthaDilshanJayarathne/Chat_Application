@@ -1,9 +1,23 @@
-.clientMainContext{
-    -fx-background-radius: 5;
+.dark-gray-background{
+    -fx-background-color: #46474A;
 }
-.clientDashboard{
-    -fx-border-radius: 15;
+.gray-background{
+    -fx-background-color: #636566;
 }
-.search{
-    color:    #b2bec3;
+.transparent-background{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.radius{
+    -fx-background-radius: 180px;
+}
+.light-gray-background{
+    -fx-background-color: #DADADA;
+}
+.incoming-double{
+    -fx-background-color: #ffff;
+    -fx-background-radius: 20px;
+}
+.outgoing-double{
+    -fx-background-color: #5BC984;
+    -fx-background-radius: 20px;
 }
