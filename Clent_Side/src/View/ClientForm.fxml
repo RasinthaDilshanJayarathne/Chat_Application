@@ -1,89 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="939.0" prefWidth="1307.0" styleClass="mainContext" stylesheets="@../Style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientFormController">
+<AnchorPane fx:id="clientMainContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: black;" stylesheets="@../Style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientFormController">
    <children>
-      <AnchorPane fx:id="chatListContext" prefHeight="939.0" prefWidth="343.0" styleClass="chatListContext" stylesheets="@../Style/styles.css">
+      <AnchorPane fx:id="clientDashboard" layoutX="106.0" layoutY="50.0" prefHeight="972.0" prefWidth="1719.0" style="-fx-background-color: white; -fx-background-radius: 18;" styleClass="clientDashboard" stylesheets="@../Style/styles.css">
          <children>
-            <Label layoutX="19.0" layoutY="16.0" text="Welcome Rasintha" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="23.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="14.0" layoutY="73.0" prefHeight="53.0" prefWidth="143.0" style="-fx-background-color: #82ccdd; -fx-background-radius: 15;">
+            <AnchorPane layoutX="-1.0" prefHeight="972.0" prefWidth="114.0" style="-fx-background-color: #2d3436; -fx-background-radius: 18;">
                <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="COMMENT" layoutX="51.0" layoutY="37.0" size="30" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="180.0" layoutY="73.0" prefHeight="53.0" prefWidth="143.0" style="-fx-background-color: #82ccdd; -fx-background-radius: 15;">
+                  <JFXButton layoutX="13.0" layoutY="224.0" prefHeight="63.0" prefWidth="79.0" ripplerFill="#2d3436" textFill="#2d3436">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COMMENTING" size="50" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="16.0" layoutY="315.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#2d3436" textFill="#2d3436">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COG" size="50" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="408.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#2d3436" textFill="#2d3436">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="50" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="14.0" layoutY="503.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#2d3436" textFill="#2d3436">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="50" text="" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="15.0" layoutY="840.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#2d3436" textFill="#2d3436">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="50" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children></AnchorPane>
+            <AnchorPane layoutX="513.0" layoutY="889.0" prefHeight="83.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;" />
+            <AnchorPane layoutX="513.0" prefHeight="111.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;" />
+            <AnchorPane layoutX="98.0" prefHeight="972.0" prefWidth="430.0" style="-fx-background-color: #b2bec3;">
                <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="COMMENTS" layoutX="46.0" layoutY="37.0" size="30" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="14.0" layoutY="148.0" prefHeight="53.0" prefWidth="309.0" style="-fx-background-color: #82ccdd; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="13.0" text="Searching..." textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <Circle fill="WHITE" layoutX="52.0" layoutY="289.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
-            <FontAwesomeIconView fill="#636e72" glyphName="USER" layoutX="33.0" layoutY="306.0" size="50" />
-            <Circle fill="#00b894" layoutX="73.0" layoutY="313.0" radius="9.0" stroke="#00b894" strokeType="INSIDE" />
-            <Label layoutX="94.0" layoutY="275.0" text="Rasintha">
-               <font>
-                  <Font name="System Bold" size="23.0" />
-               </font>
-            </Label>
-            <Circle fill="WHITE" layoutX="52.0" layoutY="382.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
-            <FontAwesomeIconView fill="#636e72" glyphName="USER" layoutX="33.0" layoutY="399.0" size="50" />
-            <Circle fill="#ff2209" layoutX="73.0" layoutY="406.0" radius="9.0" stroke="#ff2209" strokeType="INSIDE" />
-            <Label layoutX="94.0" layoutY="368.0" text="Dilshan">
-               <font>
-                  <Font name="System Bold" size="23.0" />
-               </font>
-            </Label>
-            <Circle fill="WHITE" layoutX="52.0" layoutY="477.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
-            <FontAwesomeIconView fill="#636e72" glyphName="USER" layoutX="33.0" layoutY="494.0" size="50" />
-            <Circle fill="#ff2209" layoutX="73.0" layoutY="501.0" radius="9.0" stroke="#ff2209" strokeType="INSIDE" />
-            <Label layoutX="94.0" layoutY="463.0" text="Yasiru">
-               <font>
-                  <Font name="System Bold" size="23.0" />
-               </font>
-            </Label>
-         </children></AnchorPane>
-      <AnchorPane fx:id="headerContext" layoutX="343.0" prefHeight="87.0" prefWidth="964.0" styleClass="chatHeader" stylesheets="@../Style/styles.css">
-         <children>
-            <Circle fill="WHITE" layoutX="62.0" layoutY="42.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
-            <FontAwesomeIconView fill="#636e72" glyphName="USER" layoutX="43.0" layoutY="59.0" size="50" />
-            <Circle fill="#00b894" layoutX="83.0" layoutY="66.0" radius="9.0" stroke="#00b894" strokeType="INSIDE" />
-            <FontAwesomeIconView glyphName="COG" layoutX="896.0" layoutY="59.0" size="40" />
-            <Label layoutX="104.0" layoutY="28.0" text="Rasintha">
-               <font>
-                  <Font name="System Bold" size="23.0" />
-               </font>
-            </Label>
-         </children></AnchorPane>
-      <AnchorPane fx:id="keeyBoardContext" layoutX="343.0" layoutY="865.0" prefHeight="74.0" prefWidth="964.0" styleClass="keyboard" stylesheets="@../Style/styles.css">
-         <children>
-            <TextField layoutY="-5.0" prefHeight="80.0" prefWidth="964.0" />
-            <Label layoutX="13.0" layoutY="23.0" text="Type message...">
+                  <AnchorPane layoutY="121.0" prefHeight="5.0" prefWidth="430.0" style="-fx-background-color: #2d3436;" />
+                  <AnchorPane layoutX="17.0" layoutY="30.0" prefHeight="62.0" prefWidth="394.0" style="-fx-background-color: #2d3436; -fx-background-radius: 25;">
+                     <children>
+                        <JFXTextField focusColor="#2d3436" layoutX="73.0" layoutY="10.0" prefHeight="47.0" prefWidth="295.0" promptText="Searching...." unFocusColor="#2d3436">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <FontAwesomeIconView fill="#b2bec3" glyphName="SEARCH" layoutX="15.0" layoutY="44.0" size="35" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <JFXTextArea focusColor="WHITE" layoutX="547.0" layoutY="121.0" prefHeight="767.0" prefWidth="1156.0" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
-            </Label>
-            <FontAwesomeIconView fill="#3498db" glyphName="PAPER_PLANE" layoutX="912.0" layoutY="50.0" size="30" />
-            <FontAwesomeIconView fill="#3498db" glyphName="IMAGE" layoutX="861.0" layoutY="50.0" size="30" />
-            <FontAwesomeIconView fill="#3498db" glyphName="FILE" layoutX="809.0" layoutY="49.0" size="30" />
-         </children></AnchorPane>
-      <AnchorPane fx:id="chatContext" layoutX="343.0" layoutY="87.0" prefHeight="777.0" prefWidth="964.0" styleClass="chatContext" stylesheets="@../Style/styles.css" />
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
