@@ -55,8 +55,57 @@
                      </cursor>
                   </JFXButton>
                </children></AnchorPane>
-            <AnchorPane layoutX="513.0" layoutY="889.0" prefHeight="83.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;" />
-            <AnchorPane layoutX="513.0" prefHeight="111.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;" />
+            <AnchorPane layoutX="513.0" layoutY="889.0" prefHeight="83.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;">
+               <children>
+                  <JFXButton layoutX="99.0" layoutY="16.0" prefHeight="62.0" prefWidth="55.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#576574" glyphName="CHAIN" size="45" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField focusColor="#dfe6e9" layoutX="182.0" layoutY="14.0" prefHeight="62.0" prefWidth="906.0" promptText="Type something to send ..." unFocusColor="#dfe6e9">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="1117.0" layoutY="13.0" prefHeight="62.0" prefWidth="61.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#10ac84" glyphName="PAPER_PLANE" size="40" />
+                     </graphic>
+                  </JFXButton>
+               </children></AnchorPane>
+            <AnchorPane layoutX="513.0" prefHeight="111.0" prefWidth="1208.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 18;">
+               <children>
+                  <JFXButton layoutX="1011.0" layoutY="26.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#636e72" glyphName="PHONE" size="40" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="1081.0" layoutY="25.0" prefHeight="62.0" prefWidth="65.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#636e72" glyphName="VIDEO_CAMERA" size="40" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="1156.0" layoutY="25.0" prefHeight="62.0" prefWidth="49.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#636e72" glyphName="ELLIPSIS_V" size="40" />
+                     </graphic>
+                  </JFXButton>
+               </children></AnchorPane>
             <AnchorPane layoutX="98.0" prefHeight="972.0" prefWidth="430.0" style="-fx-background-color: #b2bec3;">
                <children>
                   <AnchorPane layoutY="121.0" prefHeight="5.0" prefWidth="430.0" style="-fx-background-color: #2d3436;" />
