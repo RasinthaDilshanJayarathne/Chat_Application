@@ -2,4 +2,4 @@
 
 #User Interface
 
-![Screenshot (1231)](https://user-images.githubusercontent.com/87766409/184176241-659c8654-47e4-4368-b287-6738ac28f6b9.png)
+![Screenshot (1234)](https://user-images.githubusercontent.com/87766409/184276093-d0ddecf9-8891-4aae-8acb-5027306d66bd.png)
