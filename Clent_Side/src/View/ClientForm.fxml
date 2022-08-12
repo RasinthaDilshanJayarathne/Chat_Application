@@ -14,7 +14,7 @@
    <children>
       <AnchorPane fx:id="clientDashboard" layoutX="106.0" layoutY="50.0" prefHeight="972.0" prefWidth="1719.0" style="-fx-background-color: white; -fx-background-radius: 18;" styleClass="clientDashboard" stylesheets="@../Style/styles.css">
          <children>
-            <AnchorPane layoutX="-1.0" prefHeight="972.0" prefWidth="114.0" style="-fx-background-color: #2d3436; -fx-background-radius: 18;">
+            <AnchorPane layoutX="-1.0" prefHeight="972.0" prefWidth="114.0" style="-fx-background-color: #46474A; -fx-background-radius: 18;">
                <children>
                   <JFXButton layoutX="13.0" layoutY="224.0" prefHeight="63.0" prefWidth="79.0" ripplerFill="#2d3436" textFill="#2d3436">
                      <graphic>
@@ -129,12 +129,12 @@
                   <FontAwesomeIconView fill="#10ac84" glyphName="CIRCLE" layoutX="125.0" layoutY="76.0" size="20" />
                   <FontAwesomeIconView fill="#576574" glyphName="USER" layoutX="84.0" layoutY="63.0" size="50" wrappingWidth="54.750001430511475" />
                </children></AnchorPane>
-            <AnchorPane layoutX="98.0" prefHeight="972.0" prefWidth="430.0" style="-fx-background-color: #b2bec3;">
+            <AnchorPane layoutX="98.0" prefHeight="972.0" prefWidth="430.0" style="-fx-background-color: #636566;">
                <children>
                   <AnchorPane layoutY="121.0" prefHeight="5.0" prefWidth="430.0" style="-fx-background-color: #2d3436;" />
-                  <AnchorPane layoutX="17.0" layoutY="30.0" prefHeight="62.0" prefWidth="394.0" style="-fx-background-color: #2d3436; -fx-background-radius: 25;">
+                  <AnchorPane layoutX="17.0" layoutY="30.0" prefHeight="62.0" prefWidth="394.0" style="-fx-background-color: #46474A; -fx-background-radius: 25;">
                      <children>
-                        <JFXTextField focusColor="#2d3436" layoutX="73.0" layoutY="10.0" prefHeight="47.0" prefWidth="295.0" promptText="Searching...." unFocusColor="#2d3436">
+                        <JFXTextField focusColor="#46474a" layoutX="73.0" layoutY="10.0" prefHeight="47.0" prefWidth="295.0" promptText="Searching...." unFocusColor="#46474a">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
