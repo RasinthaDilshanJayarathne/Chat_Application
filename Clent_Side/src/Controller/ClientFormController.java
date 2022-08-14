@@ -6,7 +6,6 @@ import javafx.scene.shape.Circle;
 
 public class ClientFormController {
 
-
     public AnchorPane clientMainContext;
     public AnchorPane clientDashboard;
 

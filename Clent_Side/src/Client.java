@@ -1,8 +1,13 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client {
+public class Client{
     private Socket socket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
@@ -72,12 +77,12 @@ public class Client {
     }
 
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your username for the group chat : ");
-        String username = scanner.nextLine();
-        Socket socket = new Socket("localhost", 6000);
-        Client client = new Client(socket, username);
-        client.listenForMessage();
-        client.sendMessage();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter your username for the group chat : ");
+//        String username = scanner.nextLine();
+//        Socket socket = new Socket("localhost", 6000);
+//        Client client = new Client(socket, username);
+//        client.listenForMessage();
+//        client.sendMessage();
     }
 }
