@@ -1,0 +1,23 @@
+.dark-gray-background{
+    -fx-background-color: #46474A;
+}
+.gray-background{
+    -fx-background-color: #636566;
+}
+.transparent-background{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.radius{
+    -fx-background-radius: 180px;
+}
+.light-gray-background{
+    -fx-background-color: #DADADA;
+}
+.incoming-double{
+    -fx-background-color: #ffff;
+    -fx-background-radius: 20px;
+}
+.outgoing-double{
+    -fx-background-color: #5BC984;
+    -fx-background-radius: 20px;
+}

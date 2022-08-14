@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="946.0" prefWidth="1509.0" style="-fx-background-radius: 15; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <HBox prefHeight="819.0" prefWidth="435.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="766.0" prefWidth="84.0" styleClass="dark-gray-background" stylesheets="@../Style/styles.css">
+               <children>
+                  <Pane prefHeight="246.0" prefWidth="92.0" />
+                  <JFXButton prefHeight="50.0" prefWidth="55.0" ripplerFill="#46474a" textFill="#46474a">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COMMENTING" size="40" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton textFill="#46474a">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COG" size="40" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton textFill="#46474a">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="40" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton textFill="#46474a">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="40" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Pane prefHeight="256.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <JFXButton textFill="#46474a">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="40" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="766.0" prefWidth="351.0" styleClass="gray-background" stylesheets="@../Style/styles.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="200.0" stylesheets="@../Style/styles.css">
+                     <children>
+                        <FontAwesomeIconView fill="#8a8686" glyphName="SEARCH" size="30">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <TextField prefHeight="50.0" prefWidth="214.0" promptText="Search....." styleClass="transparent-background" stylesheets="@../Style/styles.css">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Ebrima" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="dark-gray-background" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="2.0" prefWidth="200.0" styleClass="dark-gray-background" stylesheets="@../Style/styles.css" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/1.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="105.0" text="Mark" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="You: Thank you.I will" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/2.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Jay" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="wow, Greate!" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="91.0" prefWidth="68.0">
+                           <children>
+                              <Circle fill="#10ac84" layoutX="34.0" layoutY="46.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label layoutX="29.0" layoutY="37.0" text="1">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/3.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Ruby" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Hello, Bro" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="91.0" prefWidth="68.0">
+                           <children>
+                              <Circle fill="#10ac84" layoutX="34.0" layoutY="46.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label layoutX="29.0" layoutY="37.0" text="4">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Yasiru" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="What is it bro." textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="91.0" prefWidth="68.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Dilshan" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Thank a lot" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="91.0" prefWidth="68.0">
+                           <children>
+                              <Circle fill="#10ac84" layoutX="34.0" layoutY="46.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label layoutX="29.0" layoutY="37.0" text="5">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="315.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Stiven" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="I will see you" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="91.0" prefWidth="68.0">
+                           <children>
+                              <Circle fill="#10ac84" layoutX="34.0" layoutY="46.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label layoutX="29.0" layoutY="37.0" text="1">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="122.0" prefWidth="870.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="74.0" text="Mark" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima Bold" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Circle fill="#10ac84" radius="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label prefHeight="32.0" prefWidth="74.0" text="Online" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Pane prefHeight="80.0" prefWidth="522.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton prefHeight="62.0" prefWidth="65.0" ripplerFill="WHITE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#9da7a7" glyphName="PHONE" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="62.0" prefWidth="65.0" ripplerFill="WHITE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#9da7a7" glyphName="VIDEO_CAMERA" size="35" text="" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="62.0" prefWidth="49.0" ripplerFill="WHITE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="#9da7a7" glyphName="ELLIPSIS_V" size="35" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="-10.0" right="-10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="788.0" prefWidth="870.0" styleClass="transparent-background" stylesheets="@../Style/styles.css">
+               <content>
+                  <Pane prefHeight="758.0" prefWidth="1072.0" styleClass="light-gray-background" stylesheets="@../Style/styles.css">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="37.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="94.0" layoutY="46.0" prefHeight="30.0" prefWidth="86.0" styleClass="incoming-double" stylesheets="@../Style/styles.css" text="Hello :)" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="975.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/3.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="836.0" layoutY="89.0" prefHeight="30.0" prefWidth="132.0" styleClass="outgoing-double" stylesheets="@../Style/styles.css" text="Yah,Hello :)" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="37.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="94.0" layoutY="134.0" prefHeight="102.0" prefWidth="297.0" styleClass="incoming-double" stylesheets="@../Style/styles.css" text="I have added the assignment&#10;to GitHub repo.Please use the&#10; css files which I have attached." textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="975.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/3.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="882.0" layoutY="243.0" prefHeight="30.0" prefWidth="86.0" styleClass="outgoing-double" stylesheets="@../Style/styles.css" text="Ok,Sir" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="37.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="94.0" layoutY="288.0" prefHeight="102.0" prefWidth="297.0" styleClass="incoming-double" stylesheets="@../Style/styles.css" text="I have added the assignment&#10;to GitHub repo.Please use the&#10; css files which I have attached." textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="975.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/3.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="668.0" layoutY="405.0" prefHeight="102.0" prefWidth="297.0" styleClass="outgoing-double" stylesheets="@../Style/styles.css" text="I have added the assignment&#10;to GitHub repo.Please use the&#10; css files which I have attached." textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="45.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="102.0" layoutY="515.0" prefHeight="30.0" prefWidth="86.0" styleClass="incoming-double" stylesheets="@../Style/styles.css" text="Ok :)" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="975.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/3.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="814.0" layoutY="558.0" prefHeight="30.0" prefWidth="154.0" styleClass="outgoing-double" stylesheets="@../Style/styles.css" text="Thank you Sir" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="45.0" layoutY="596.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/4.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="102.0" layoutY="604.0" prefHeight="30.0" prefWidth="217.0" styleClass="incoming-double" stylesheets="@../Style/styles.css" text="Your are welcome :)" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="975.0" layoutY="640.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/3.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="907.0" layoutY="647.0" prefHeight="30.0" prefWidth="61.0" styleClass="outgoing-double" stylesheets="@../Style/styles.css" text=":)" textFill="#696b6b">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="117.0" prefWidth="870.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="90.0" prefWidth="1083.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton prefHeight="62.0" prefWidth="54.0" ripplerFill="#dfe6e9" textFill="#dfe6e9">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="#576574" glyphName="CIRCLE" size="35" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <TextField prefHeight="55.0" prefWidth="898.0" promptText="Typing something to send....." styleClass="transparent-background" stylesheets="@../Style/styles.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <JFXButton prefHeight="41.0" prefWidth="74.0" ripplerFill="WHITE" textFill="#dfe6e9">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="#10ac84" glyphName="PAPER_PLANE" size="30" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
