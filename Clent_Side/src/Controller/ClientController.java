@@ -1,9 +1,6 @@
 package Controller;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -12,14 +9,17 @@ public class ClientController extends Thread{
     private ArrayList<ClientController> clients;
     private Socket socket;
     private BufferedReader reader;
-    private PrintWriter writer;
+    private BufferedWriter writer;
+
+    private String username;
 
     public ClientController(Socket socket, ArrayList<ClientController> clients) {
         try {
             this.socket = socket;
             this.clients = clients;
             this.reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            this.writer = new PrintWriter(socket.getOutputStream(), true);
+            this.writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            this.username = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -34,7 +34,12 @@ public class ClientController extends Thread{
                     break;
                 }
                 for (ClientController cl : clients) {
-                    cl.writer.println(msg);
+
+                    if (!cl.username.equals(username)){
+                        cl.writer.write(msg);
+                        cl.writer.newLine();
+                        cl.writer.flush();
+                    }
                 }
 
             }

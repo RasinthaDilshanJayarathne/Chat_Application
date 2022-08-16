@@ -1,50 +1,49 @@
 package Controller;
 
-import javafx.embed.swing.SwingFXUtils;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.NodeOrientation;
-import javafx.scene.Node;
-import javafx.scene.Scene;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.Socket;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class ClientFormController extends Thread implements Initializable {
+public class ClientFormController {
+    public static String userName;
     public AnchorPane clientContext;
     public Label lblName;
     public TextField txtType;
-    public TextArea txtChatArea;
+    //public TextArea txtChatArea;
     public Button btnSend;
     public Button btnCamera;
     public Button btnEmoji;
     public ImageView imgProfile;
     public ComboBox<String> cmbInfo;
-
+    public ScrollPane scrollPane;
+    public VBox messageText;
+    public boolean saveControl = false;
     BufferedReader reader;
-    PrintWriter writer;
-    Socket socket=null;
+    //    private FileChooser fileChooser;
+//    private File filePath;
+    BufferedWriter writer;
+    Socket socket = null;
 
-    private FileChooser fileChooser;
-    private File filePath;
+    public void setData(String name) {
+        lblName.setText(name);
+    }
 
-   public void setData(String name) {
-       lblName.setText(name);
-   }
 
-   @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize() {
 
 //        cmbInfo.getItems().addAll(
 //                "Logout"
@@ -62,43 +61,95 @@ public class ClientFormController extends Thread implements Initializable {
 //                }
 //            }
 //        });
-
-       try {
-           socket = new Socket("localhost", 8889);
-           //System.out.println("Socket is connected with server!");
-           reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-           writer = new PrintWriter(socket.getOutputStream(), true);
-           this.start();
-
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
-    }
-
-    @Override
-    public void run() {
         try {
-            while (true) {
-                String msg = reader.readLine();
-                String[] tokens = msg.split(" ");
-                String cmd = tokens[0];
-                System.out.println(cmd);
-                StringBuilder fulmsg = new StringBuilder();
-                for(int i = 1; i < tokens.length; i++) {
-                    fulmsg.append(tokens[i]);
+            this.socket = new Socket("localhost", 8889);
+            //System.out.println("Socket is connected with server!");
+            this.reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this.writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            this.writer.write(userName);
+            this.writer.newLine();
+            this.writer.flush();
+
+            new Thread(() -> {
+                String msg;
+                try {
+                    while (true) {
+                        msg = reader.readLine();
+                        System.out.println("Message :"+msg);
+
+                        if (msg.startsWith("IMG")) {
+
+                            System.out.println("AAAAAAAAAAAAAAA");
+
+                            String replace = msg.replace("IMG", " ");
+                            String[] split = replace.split("=");
+
+                            System.out.println(split[0]);
+                            System.out.println(split[1]);
+
+                            HBox hBox = new HBox();
+                            hBox.setAlignment(Pos.CENTER_LEFT);
+                            hBox.setPadding(new Insets(5, 5, 5, 10));
+
+                            Text text1 = new Text(split[0] + " : ");
+                            TextFlow textFlow1 = new TextFlow(text1);
+                            textFlow1.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#8b49d2;");
+                            textFlow1.setPadding(new Insets(5, 10, 5, 10));
+                            text1.setFill(Color.color(1, 1, 1, 1));
+
+                            ImageView imageView = new ImageView();
+                            //Setting image to the image view
+                            imageView.setImage(new Image(new File(split[1]).toURI().toString()));
+                            //Setting the image view parameters
+                            imageView.setFitWidth(300);
+                            imageView.setPreserveRatio(true);
+
+                            hBox.getChildren().add(textFlow1);
+                            hBox.getChildren().add(imageView);
+
+                            Platform.runLater(new Runnable() {
+                                @Override
+                                public void run() {
+                                    messageText.getChildren().add(hBox);
+                                }
+                            });
+
+                        }else {
+                            HBox hBox = new HBox();
+                            hBox.setAlignment(Pos.CENTER_LEFT);
+                            hBox.setPadding(new Insets(5, 5, 5, 10));
+
+                            Text text = new Text(msg);
+                            TextFlow textFlow = new TextFlow(text);
+
+                            textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#8b49d2;" + "-fx-background-radius:10px");
+
+                            textFlow.setPadding(new Insets(5, 10, 5, 10));
+                            text.setFill(Color.color(1, 1, 1, 1));
+                            hBox.getChildren().add(textFlow);
+
+                            Platform.runLater(new Runnable() {
+                                @Override
+                                public void run() {
+                                    messageText.getChildren().add(hBox);
+                                }
+                            });
+                        }
+                    }
+
+                } catch (IOException e) {
+                    try {
+                        reader.close();
+                        writer.close();
+                        socket.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                    e.printStackTrace();
                 }
-                System.out.println(fulmsg);
-                if (cmd.equalsIgnoreCase(lblName.getText() + ":")) {
-                    continue;
-                }else if(fulmsg.toString().equalsIgnoreCase("Bye")) {
-                    break;
-                }
-                txtChatArea.appendText(msg + "\n\n");
-            }
-            reader.close();
-            writer.close();
-            socket.close();
-        } catch (Exception e) {
+            }).start();
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -106,47 +157,101 @@ public class ClientFormController extends Thread implements Initializable {
     public void sendOnAction(ActionEvent event) throws IOException {
         String msg = txtType.getText();
 
-        writer.println(lblName.getText() + ": " + msg);
-        txtChatArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
-        txtChatArea.appendText("Me: " + msg + "\n\n");
-        txtType.setText("");
-        if(msg.equalsIgnoreCase("Bye") || msg.equalsIgnoreCase("Exit")) {
-            System.exit(0);
-        }
+//        txtChatArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
+//        txtChatArea.appendText("Me: " + msg + "\n\n");
+//        txtType.setText("");
+//        if(msg.equalsIgnoreCase("Bye") || msg.equalsIgnoreCase("Exit")) {
+//            System.exit(0);
+//        }
+
+        HBox hBox = new HBox();
+        hBox.setAlignment(Pos.CENTER_RIGHT);
+        hBox.setPadding(new Insets(5, 5, 5, 10));
+
+        Text text = new Text("Me: " + msg);
+        TextFlow textFlow = new TextFlow(text);
+
+        textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#8b49d2;" + "-fx-background-radius:10px");
+
+        textFlow.setPadding(new Insets(5, 10, 5, 10));
+        text.setFill(Color.color(1, 1, 1, 1));
+        hBox.getChildren().add(textFlow);
+        messageText.getChildren().add(hBox);
+
+        writer.write(userName + " : " + msg);
+        writer.newLine();
+        writer.flush();
+        txtType.clear();
     }
 
-    public boolean saveControl = false;
+    public void imageOnAction(ActionEvent event) throws IOException {
 
-    public void imageOnAction(ActionEvent event) {
+//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        fileChooser = new FileChooser();
+//        fileChooser.setTitle("Open Image");
+//        this.filePath = fileChooser.showOpenDialog(stage);
+//        saveControl = true;
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Image");
-        this.filePath = fileChooser.showOpenDialog(stage);
-        saveControl = true;
+        //saveImage();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Choose a Image");
+        File file = fileChooser.showOpenDialog(null);
 
-        saveImage();
+        writer.write("IMG" + userName + " =" + file.getPath());
+        //writer.newLine();
+        writer.flush();
+
+        HBox hBox = new HBox();
+        hBox.setAlignment(Pos.CENTER_RIGHT);
+        hBox.setPadding(new Insets(5, 5, 5, 10));
+
+        Text text = new Text("Me : ");
+        TextFlow textFlow = new TextFlow(text);
+        textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#cf8bf6;");
+        textFlow.setPadding(new Insets(5, 10, 5, 10));
+        text.setFill(Color.color(1, 1, 1, 1));
+
+
+        ImageView imageView = new ImageView();
+        //Setting image to the image view
+        imageView.setImage(new Image(new File(file.getPath()).toURI().toString()));
+        //Setting the image view parameters
+        imageView.setFitWidth(300);
+        imageView.setPreserveRatio(true);
+
+        hBox.getChildren().add(textFlow);
+        hBox.getChildren().add(imageView);
+
+        messageText.getChildren().add(hBox);
     }
 
-    public void saveImage() {
-        if (saveControl) {
-
-            try {
-                BufferedImage bufferedImage = ImageIO.read(filePath);
-                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-                ImageView imageView = new ImageView();
-                imageView.setImage(image);
-                imageView.setFitHeight(30);
-                imageView.setFitWidth(30);
-                saveControl = false;
-                writer.println(lblName.getText() + ": " + imageView.getImage());
-                txtChatArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
-                txtChatArea.appendText("Me: " + imageView.getImage() + "\n\n");
-            } catch (IOException exception) {
-                exception.printStackTrace();
-            }
-        }
-    }
+//    public void saveImage() {
+//        if (saveControl) {
+//
+//            try {
+//                BufferedImage bufferedImage = ImageIO.read(filePath);
+//                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+//                ImageView imageView = new ImageView();
+//                imageView.setImage(image);
+//                imageView.setFitHeight(30);
+//                imageView.setFitWidth(30);
+//                saveControl = false;
+//                writer.println(lblName.getText() + ": " + imageView.getImage());
+//                txtChatArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
+//                txtChatArea.appendText("Me: " + imageView.getImage() + "\n\n");
+//
+//
+//                BufferedImage bi = bufferedImage;
+//                File outputfile = new File("saved.png");
+//                ImageIO.write(bi, "png", outputfile);
+//
+//            } catch (IOException exception) {
+//                exception.printStackTrace();
+//            }
+//
+//
+//        }
+//    }
 
     public void emojiOnAction(ActionEvent event) {
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
@@ -345,7 +344,7 @@
             </HBox>
          </left>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="946.0" prefWidth="877.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="122.0" prefWidth="870.0" style="-fx-background-color: white;">
                      <children>
@@ -398,17 +397,9 @@
                         </JFXButton>
                      </children>
                   </HBox>
-                  <ScrollPane prefHeight="788.0" prefWidth="344.0" styleClass="transparent-background" stylesheets="@../Style/styles.css">
+                  <ScrollPane fx:id="scrollPane" prefHeight="761.0" prefWidth="930.0" styleClass="transparent-background" stylesheets="@../Style/styles.css">
                      <content>
-                        <AnchorPane prefHeight="759.0" prefWidth="1071.0">
-                           <children>
-                              <JFXTextArea fx:id="txtChatArea" focusColor="#405aa800" layoutX="13.0" layoutY="8.0" prefHeight="744.0" prefWidth="1044.0" unFocusColor="#ffffff00">
-                                 <font>
-                                    <Font name="Ebrima" size="20.0" />
-                                 </font>
-                              </JFXTextArea>
-                           </children>
-                        </AnchorPane>
+                        <VBox fx:id="messageText" prefHeight="741.0" prefWidth="1069.0" />
                      </content>
                   </ScrollPane>
                   <HBox prefHeight="117.0" prefWidth="870.0">

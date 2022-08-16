@@ -26,12 +26,13 @@ public class LoginFormController {
             lblError.setText("All fields are required.!");
             lblError.setStyle("-fx-text-fill: red");
         }else {
+            ClientFormController.userName = txtUsername.getText();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/Client.fxml"));
             Parent load = loader.load();
             Controller.ClientFormController controller=loader.<Controller.ClientFormController>getController();
             controller.setData(txtUsername.getText());
             Stage window = (Stage) loginContext.getScene().getWindow();
-            window.setTitle("Chat Room");
+            //window.setTitle("Chat Room");
             window.setScene(new Scene(load));
         }
     }
