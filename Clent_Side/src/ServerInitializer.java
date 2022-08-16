@@ -14,7 +14,7 @@ public class ServerInitializer{
         Socket socket ;
 
         try {
-            serverSocket = new ServerSocket(8889);
+            serverSocket = new ServerSocket(9000);
             while(true) {
                 //System.out.println("Waiting for clients...");
                 socket = serverSocket.accept();
@@ -26,6 +26,5 @@ public class ServerInitializer{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

@@ -364,13 +364,13 @@
                               <Insets left="20.0" />
                            </HBox.margin>
                         </Label>
-                        <Pane prefHeight="95.0" prefWidth="508.0" HBox.hgrow="ALWAYS" />
-                        <JFXButton prefHeight="62.0" prefWidth="65.0" ripplerFill="WHITE" textFill="WHITE">
+                        <Pane prefHeight="104.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                        <JFXButton prefHeight="62.0" prefWidth="33.0" ripplerFill="WHITE" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <graphic>
-                              <FontAwesomeIconView fill="#9da7a7" glyphName="PHONE" size="35" />
+                              <FontAwesomeIconView fill="#9da7a7" glyphName="PHONE" size="35" wrappingWidth="27.5" />
                            </graphic>
                         </JFXButton>
                         <JFXButton prefHeight="62.0" prefWidth="65.0" ripplerFill="WHITE" textFill="WHITE">
@@ -381,7 +381,7 @@
                               <FontAwesomeIconView fill="#9da7a7" glyphName="VIDEO_CAMERA" size="35" text="" />
                            </graphic>
                            <HBox.margin>
-                              <Insets />
+                              <Insets right="10.0" />
                            </HBox.margin>
                         </JFXButton>
                         <JFXButton prefHeight="62.0" prefWidth="0.0" ripplerFill="WHITE" textFill="WHITE">
@@ -399,7 +399,7 @@
                   </HBox>
                   <ScrollPane fx:id="scrollPane" prefHeight="761.0" prefWidth="930.0" styleClass="transparent-background" stylesheets="@../Style/styles.css">
                      <content>
-                        <VBox fx:id="messageText" prefHeight="741.0" prefWidth="1069.0" />
+                        <VBox fx:id="messageText" prefHeight="741.0" prefWidth="1072.0" style="-fx-background-color: #626868;" />
                      </content>
                   </ScrollPane>
                   <HBox prefHeight="117.0" prefWidth="870.0">

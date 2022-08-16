@@ -61,7 +61,7 @@ public class ClientFormController {
 //            }
 //        });
         try {
-            this.socket = new Socket("localhost", 8889);
+            this.socket = new Socket("localhost", 9000);
             //System.out.println("Socket is connected with server!");
             this.reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -92,7 +92,7 @@ public class ClientFormController {
 
                             Text text1 = new Text(split[0] + " : ");
                             TextFlow textFlow1 = new TextFlow(text1);
-                            textFlow1.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#8b49d2;");
+                            textFlow1.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#aab1af;");
                             textFlow1.setPadding(new Insets(5, 10, 5, 10));
                             text1.setFill(Color.color(1, 1, 1, 1));
 
@@ -121,7 +121,7 @@ public class ClientFormController {
                             Text text = new Text(msg);
                             TextFlow textFlow = new TextFlow(text);
 
-                            textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#8b49d2;" + "-fx-background-radius:10px");
+                            textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#aab1af;" + "-fx-background-radius:10px");
 
                             textFlow.setPadding(new Insets(5, 10, 5, 10));
                             text.setFill(Color.color(1, 1, 1, 1));
@@ -170,7 +170,7 @@ public class ClientFormController {
         Text text = new Text("Me: " + msg);
         TextFlow textFlow = new TextFlow(text);
 
-        textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#8b49d2;" + "-fx-background-radius:10px");
+        textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#10ac84;" + "-fx-background-radius:10px");
 
         textFlow.setPadding(new Insets(5, 10, 5, 10));
         text.setFill(Color.color(1, 1, 1, 1));
@@ -206,7 +206,7 @@ public class ClientFormController {
 
         Text text = new Text("Me : ");
         TextFlow textFlow = new TextFlow(text);
-        textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#cf8bf6;");
+        textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#10ac84;");
         textFlow.setPadding(new Insets(5, 10, 5, 10));
         text.setFill(Color.color(1, 1, 1, 1));
 
