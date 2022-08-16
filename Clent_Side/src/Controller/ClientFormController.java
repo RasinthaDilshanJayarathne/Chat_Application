@@ -33,8 +33,7 @@ public class ClientFormController {
     public VBox messageText;
     public boolean saveControl = false;
     BufferedReader reader;
-    //    private FileChooser fileChooser;
-//    private File filePath;
+
     BufferedWriter writer;
     Socket socket = null;
 
@@ -138,13 +137,13 @@ public class ClientFormController {
                     }
 
                 } catch (IOException e) {
-                    try {
-                        reader.close();
-                        writer.close();
-                        socket.close();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
+//                    try {
+//                        reader.close();
+//                        writer.close();
+//                        socket.close();
+//                    } catch (IOException e1) {
+//                        e1.printStackTrace();
+//                    }
                     e.printStackTrace();
                 }
             }).start();
@@ -198,7 +197,7 @@ public class ClientFormController {
         File file = fileChooser.showOpenDialog(null);
 
         writer.write("IMG" + userName + " =" + file.getPath());
-        //writer.newLine();
+        writer.newLine();
         writer.flush();
 
         HBox hBox = new HBox();

@@ -29,19 +29,15 @@ public class ClientController extends Thread{
     public void run() {
         try {
             String msg;
-            while ((msg = reader.readLine()) != null) {
-                if (msg.equalsIgnoreCase( "exit")) {
-                    break;
-                }
+            while (socket.isConnected()) {
+                msg = reader.readLine();
                 for (ClientController cl : clients) {
-
                     if (!cl.username.equals(username)){
                         cl.writer.write(msg);
                         cl.writer.newLine();
                         cl.writer.flush();
                     }
                 }
-
             }
         } catch (Exception e) {
             e.printStackTrace();
