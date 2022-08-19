@@ -121,7 +121,7 @@ public class ClientFormController {
                             Text text = new Text(msg);
                             TextFlow textFlow = new TextFlow(text);
 
-                            textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#aab1af;" + "-fx-background-radius:10px");
+                            textFlow.setStyle("-fx-font-weight: bold;" + "-fx-background-color:#dadada;" + "-fx-background-radius:10px");
 
                             textFlow.setPadding(new Insets(5, 10, 5, 10));
                             text.setFill(Color.color(1, 1, 1, 1));
